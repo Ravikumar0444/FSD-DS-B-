@@ -6,15 +6,20 @@
     <title>Loop</title>
 </head>
 <body>
+    <p id = "demo"></p>
     <script>
         // Code for (FOR LOOP)
-        for(let i = 1;i<5;i++){
-            document.write(i + "<br>");
-        }
+        // for(let i = 1;i<5;i++){
+        //     document.write(i + "<br>");
+        // }
         const car = ['car1' , 'car2' , 'car3'];
-        for(let i = 0;i<car.length;i++){
-            document.write(car[i] + "<br>");
+        let len = car.length;
+        let text = " ";
+        for(let i = 0;i<len;i++){
+            text += car[i] + "<br>";
         }
+        document.getElementById("demo").innerHTML = text;
+
 
     </script>
 </body>
