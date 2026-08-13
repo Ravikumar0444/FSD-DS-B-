@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition JS</title>
+</head>
+<body>
+    <script>
+        var num = 153;
+        var a = num;
+        var s = 0;
+        while(a > 0){
+            var r = a%10;
+            s += r*r*r;
+            a = Math.floor(a/10);
+        }
+        if(num == s){
+            alert("num is armstrong")
+        }
+        else{
+            alert("num is not armstrong")
+        }
+    </script>
+</body>
+</html>
