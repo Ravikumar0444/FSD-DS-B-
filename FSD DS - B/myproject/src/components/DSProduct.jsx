@@ -8,6 +8,7 @@ const DSProduct = () => {
     const[red , setRed] = useState(0);
     const[green , setGreen] = useState(0);
     const[blue , setBlue] = useState(0);
+    const [rotation, setRotation] = useState(0);
 
     function setHeight(){
         setCatHeight(catHeight+20);
@@ -20,11 +21,14 @@ const DSProduct = () => {
         setGreen(Math.random()*255);
         setBlue(Math.random()*255);
     }
+    function rotateRight(){
+         setRotation(rotation + 45);
+    }
   return (
     <div>
       <h2 style={{color:'brown',backgroundColor:'white'}}>Image Manipulation</h2>
       <div style={{backgroundColor:`rgb(${red},${green},${blue})` ,border:'4px solid red' , height:'400px',width:'400px', marginLeft:'300px'}}>
-        <img src={cat} height={catHeight} width={catWidth} style={{transform: 'rotate(45deg) scale(1.2)'}}/>
+        <img src={cat} height={catHeight} width={catWidth} style={{transform: `rotate(${rotation}deg) scale(1.2)`,}}/>
         <div>
             <h3>Cat Height:{catHeight}</h3>
             <h3>Cat Width:{catWidth}</h3>
@@ -37,6 +41,7 @@ const DSProduct = () => {
         <button onClick={setHeight}>enhanceHeight</button>
         <button onClick={setWidth}>enhancewidht</button>
         <button onClick={changeBGColor}>ChangeBGColor</button>
+        <button onClick={rotateRight}>Rotate Right</button>
       </div>
 
     </div>
