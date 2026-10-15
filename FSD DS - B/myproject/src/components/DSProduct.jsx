@@ -22,7 +22,7 @@ const DSProduct = () => {
         setBlue(Math.random()*255);
     }
     function rotateRight(){
-         setRotation(rotation + 45);
+         setRotation(rotation + 20);
     }
   return (
     <div>
@@ -35,6 +35,7 @@ const DSProduct = () => {
             <h2>Red:{red}</h2>
             <h2>Green:{green}</h2>
             <h2>Blue:{blue}</h2>
+            <h2>Angle:{rotation}</h2>
         </div>
       </div>
       <div>
